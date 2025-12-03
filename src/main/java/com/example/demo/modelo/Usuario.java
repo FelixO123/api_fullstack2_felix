@@ -5,7 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import jakarta.persistence.*;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -40,7 +40,7 @@ public class Usuario {
     private String comuna;
 
     @Column(unique = false, nullable = false)
-    private Date fechaCreacion;
+    private LocalDate fechaCreacion = LocalDate.now();
 
 
 }

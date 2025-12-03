@@ -38,6 +38,11 @@ public class UsuarioController {
         return usuarioService.findById(idUsuario);
     }
 
+    @GetMapping("/buscarEmail/{email}")
+    public Usuario buscarPorEmail(@PathVariable String email) {
+        return usuarioService.findByEmail(email);
+    }
+
     // ELIMINAR USUARIO
     @DeleteMapping("/eliminar/{idUsuario}")
     public String eliminar(@PathVariable Integer idUsuario) {

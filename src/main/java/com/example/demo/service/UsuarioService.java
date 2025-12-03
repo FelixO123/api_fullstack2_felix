@@ -57,6 +57,11 @@ public class UsuarioService {
         return null;
     }
 
+    public Usuario findByEmail(String email) {
+        return usuarioRepository.findByEmail(email).orElse(null);
+    }
+
+
     // ELIMINAR USUARIO POR ID
     public void delete(Integer idUsuario) {
         usuarioRepository.deleteById(idUsuario);
