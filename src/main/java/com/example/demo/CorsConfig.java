@@ -14,7 +14,7 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("http://localhost:3000",
+                        .allowedOrigins("https://my-app-liard-three-74.vercel.app/",
                         "https://apifullstack2felix-production-36df.up.railway.app"
                         )
                         .allowedMethods("GET", "POST", "PUT", "DELETE")
